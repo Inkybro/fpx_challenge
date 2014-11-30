@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130205353) do
+ActiveRecord::Schema.define(version: 20141130205552) do
+
+  create_table "dealers", force: true do |t|
+    t.string "name",                null: false
+    t.string "address"
+    t.string "city",    limit: 100, null: false
+    t.string "state",   limit: 2,   null: false
+    t.string "zip",     limit: 9,   null: false
+  end
+
+  add_index "dealers", ["name"], name: "index_dealers_on_name"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
