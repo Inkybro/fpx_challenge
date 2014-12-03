@@ -7,3 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
+
+Dealer.create(name: 'FPX Autos', city: 'Oklahoma City', state: 'OK', zip: '73012')
+Dealer.create(name: 'Test Dealer', city: 'Oklahoma City', state: 'OK', zip: '73034')
+Dealer.create(name: 'Serenity Transport Ships', city: 'Beaumonde', state: 'FF', zip: '11111')
