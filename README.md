@@ -1,5 +1,5 @@
-Fpx Challenge
-================
+FPX Challenge
+-----------
 
 We'd like to thank you for taking the time to interview with Floorplan Xpress.
 In order to let us get a feel for an applicant's coding level and style, we've
@@ -33,25 +33,24 @@ To Do List
 3. Add a _form partial to the dealers view folder, and include it in both the new
      and edit views. Use Rails helpers or simple_form to create the form fields.
 
-3. Add a Unit model (required attributes should include Vin - Year - Make - Model)
-    a. Add associations so that a dealer is connected to their units
-    b. Edit the dealer show page so that it displays a list of that dealer's units.
-    c. For extra points, fully flesh out a units controller with all CRUD actions
-         and accompanying specs (passing, preferably).
+4. Add a Unit model (required attributes should include Vin - Year - Make - Model)
+  * Add associations so that a dealer is connected to their units.
+  * Edit the dealer show page so that it displays a list of that dealer's units.
+  * For extra points, fully flesh out a units controller with all CRUD actions and accompanying specs (passing, preferably).
 
-4. Update the DealersController index and show actions to respond to requests for JSON and XML.
+5. Update the DealersController index and show actions to respond to requests for JSON and XML.
 
-5. Create a method in the Dealer model that will return a list of other dealers
+6. Create a method in the Dealer model that will return a list of other dealers
      within the same city - excluding the current dealer.
 
-6. If you run the specs, you'll see that we have one failing test. Our Dealer#full_address
+7. If you run the specs, you'll see that we have one failing test. Our Dealer#full_address
      method should be able to handle dealerships that don't have a street address
      listed (just city, state, zip). However, currently it returns an ugly leading
      character when no street address is given.
 
    Change the method (not the test) so that the test will pass.
 
-7. If you'd really like to wow us, add an API token field to User, and require
+8. If you'd really like to wow us, add an API token field to User, and require
      token_auth for JSON and XML requests.
 
 
