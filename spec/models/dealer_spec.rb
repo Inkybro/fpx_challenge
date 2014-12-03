@@ -38,4 +38,24 @@ describe Dealer do
       expect(subject.errors[:state].length).to be(1)
     end
   end
+
+  describe '#full_address' do
+    it 'returns properly when an address has been entered' do
+      subject.address = '1234 Haveanaddress Blvd.'
+      subject.city = 'Test'
+      subject.state = 'OK'
+      subject.zip = '11111'
+
+      subject.full_address.should == '1234 Haveanaddress Blvd., Test, OK, 11111'
+    end
+
+    # Failing Test
+    it 'returns properly when no address has been entered' do
+      subject.city = 'Test'
+      subject.state = 'OK'
+      subject.zip = '11111'
+
+      subject.full_address.should == 'Test, OK, 11111'
+    end
+  end
 end
