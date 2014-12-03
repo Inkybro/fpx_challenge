@@ -1,0 +1,28 @@
+<h1>Dealers List</h1>
+<%= link_to 'Add a New Dealer', new_dealer_path %>
+<br /><br />
+
+<table class="table table-hover" width="100%">
+  <thead>
+    <tr>
+      <th width="30%">Dealership</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @dealers.each do |dealer| %>
+      <tr>
+        <td><%= dealer.name %></td>
+        <td><%= dealer.city %></td>
+        <td><%= dealer.state %></td>
+        <td>
+          <%= link_to 'Show', dealer_path(dealer) %> |
+          <%= link_to 'Edit', edit_dealer_path(dealer) %> |
+          <%= link_to 'Delete', dealer_path(dealer), confirm: "Really DELETE Dealer #{dealer.name}?", method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
