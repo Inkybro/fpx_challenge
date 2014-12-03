@@ -9,8 +9,8 @@ functionality yet. That's where you come in.
 The To Do List below re-creates a few every day (and some not-so-every-day)
 tasks that an experienced developer might be assigned when working for us.
 We'll be looking for task completion, but also for style and problem-solving methods,
-so that we can better understand what we could hypothetically ask from, as well as
-learn from, you.
+so that we can better understand what we could hypothetically ask from (as well as
+learn from) you.
 
 A seed file is provided (app/db/seeds.rb) with some sample dealers to populate
 the database, and can be run from the command line with the command 'rake db:seed'.
