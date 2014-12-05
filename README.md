@@ -33,7 +33,7 @@ To Do List
 3. Add a _form partial to the dealers view folder, and include it in both the new
      and edit views. Use Rails helpers or simple_form to create the form fields.
 
-4. Add a Unit model (required attributes should include Vin - Year - Make - Model)
+4. Add a Unit model and migration (required attributes should include Vin - Year - Make - Model)
   * Add associations so that a dealer is connected to their units.
   * Edit the dealer show page so that it displays a list of that dealer's units.
   * For extra points, fully flesh out a units controller with all CRUD actions and accompanying specs (passing, preferably).
@@ -50,8 +50,7 @@ To Do List
 
    Change the method (not the test) so that the test will pass.
 
-8. If you'd really like to wow us, add an API token field to User, and require
-     token_auth for JSON and XML requests.
+8. Add an API token field to User, and require token_auth for JSON and XML requests.
 
 
 Ruby on Rails
