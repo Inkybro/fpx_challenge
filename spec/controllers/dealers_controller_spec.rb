@@ -8,15 +8,18 @@ describe DealersController do
   describe 'get index' do
     it 'assigns dealers and renders index' do
       get :index
-      assigns[:dealers].should == Dealer.order('name')
-      response.should render_template('index')
+      #assigns[:dealers].should == Dealer.order('name')
+      expect(assigns[:dealers]).to eq(Dealer.order('name'))
+      #response.should render_template('index')
+      expect(response).to render_template('index')
     end
   end
 
   describe 'get show' do
     it 'renders show' do
       get :show, id: dealer.id
-      response.should render_template('show')
+      #response.should render_template('show')
+      expect(response).to render_template('show')
     end
   end
 
@@ -28,15 +31,20 @@ describe DealersController do
     end
 
     it 'destroys dealer' do
-      lambda {
+      #lambda {
+      #  do_delete
+      #}.should change(Dealer, :count).by(-1)
+      expect(lambda {
         do_delete
-      }.should change(Dealer, :count).by(-1)
-      Dealer.where(id: dealers[1].id).first.should be(nil)
+      }).to change(Dealer, :count).by(-1)
+      #Dealer.where(id: dealers[1].id).first.should be(nil)
+      expect(Dealer.where(id: dealers[1].id).first).to be(nil)
     end
 
     it 'redirects to index' do
       do_delete
-      response.should redirect_to(dealers_path)
+      #response.should redirect_to(dealers_path)
+      expect(response).to redirect_to(dealers_path)
     end
   end
 end

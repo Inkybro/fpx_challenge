@@ -15,6 +15,7 @@ gem 'devise_invitable'
 gem 'pundit'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
+gem 'simple_token_authentication', '~> 1.0'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -26,6 +27,7 @@ group :development do
   gem 'hub', :require=>nil
   gem 'rails_layout'
   gem 'spring-commands-rspec'
+  gem 'mailcatcher'
 end
 group :development, :test do
   gem 'factory_girl_rails'

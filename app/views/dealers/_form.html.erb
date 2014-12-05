@@ -1,0 +1,8 @@
+<%= simple_form_for @dealer do |f| %>
+	<%= f.input :name, label: 'Full Name' %>
+	<%= f.input :address, label: 'Address' %>
+	<%= f.input :city, size: 100, label: 'City' %>
+	<%= f.input :state, collection: get_state_options_for_select, prompt: 'State' %>
+	<%= f.input :zip, size: 10, label: 'Zip' %>
+	<%= f.button :submit, (@dealer.new_record? ? 'Create' : 'Edit') %>
+<% end %>

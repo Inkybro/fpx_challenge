@@ -1,2 +1,37 @@
 <h1><%= @dealer.name %></h1>
+<div>
+	<span><strong>Address:</strong> <%= @dealer.address %></span>
+</div>
+<div>
+	<span><strong>City:</strong> <%= @dealer.city %></span>
+</div>
+<div>
+	<span><strong>State:</strong> <%= @dealer.state %></span>
+</div>
+<div>
+	<span><strong>Zip:</strong> <%= @dealer.zip %></span>
+</div>
+
+<% if @dealer.has_units? %>
+	<h2>Units</h2>
+	<% @dealer.units.each do |unit| %>
+		<div>
+			<div>
+				<span><strong>VIN:</strong> <%= unit.vin %></span>
+			</div>
+			<div>
+				<span><strong>Year:</strong> <%= unit.year %></span>
+			</div>
+			<div>
+				<span><strong>Make:</strong> <%= unit.make %></span>
+			</div>
+			<div>
+				<span><strong>Model:</strong> <%= unit.model %></span>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+
+
 <%= link_to 'Back to All Dealers', dealers_path %>
+
